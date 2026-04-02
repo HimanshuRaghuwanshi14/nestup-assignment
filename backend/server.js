@@ -41,8 +41,7 @@ const isCircular = (predId, succId) => {
     return false;
 };
 
-// --- 3. THE CASCADE LOGIC [cite: 9, 17, 32] ---
-// Automatically updates status (blocked/in-progress/done) based on dependencies.
+
 const updateSystemStatus = () => {
     workItems.forEach(item => {
         const blockers = dependencies.filter(d => d.successorId === item.id);
